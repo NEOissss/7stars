@@ -1,0 +1,15 @@
+[zookeeper]
+
+[kafka]
+
+[redis]
+
+[storm-master]
+
+[storm-slaves]
+
+[hadoop-master]
+
+[hadoop-slaves]
+
+[mysql]
