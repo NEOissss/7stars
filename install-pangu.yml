@@ -1,0 +1,12 @@
+---
+- name: install common components
+  hosts: *
+  sudo: yes
+  roles:
+    - common
+
+- name: install zookeeper
+  hosts: zookeeper
+  sudo: yes
+  roles:
+    - zookeeper
