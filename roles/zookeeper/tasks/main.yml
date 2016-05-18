@@ -3,7 +3,7 @@
   when: run_mode == 'Stop'
 
 - include: install.yml
-  when: run_mode == 'Install' or run_mode == 'Deploy'
-
+  when: run_mode == 'Install'
+  
 - include: start.yml
-  when: run_mode == 'Start' or run_mode == 'Deploy'
+  when: run_mode == 'Start'
