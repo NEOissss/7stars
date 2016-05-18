@@ -1,5 +1,5 @@
 daemonize yes
-pidfile /var/run/redis/{{ redis_daemon }}.pid
+pidfile /var/run/redis/redis.pid
 port {{ redis_port }}
 bind {{ redis_bind_interface }}
 
@@ -39,7 +39,3 @@ maxmemory-samples {{ redis_maxmemory_samples }}
 appendonly {{ redis_appendonly }}
 appendfsync {{ redis_appendfsync }}
 no-appendfsync-on-rewrite no
-
-{% for include in redis_includes %}
-include {{ include }}
-{% endfor %}
