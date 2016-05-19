@@ -6,7 +6,7 @@
     - common
 
 - name: install zookeeper
-  hosts: zookeeper
+  hosts: zookeeper_hosts
   sudo: yes
   roles:
-    - zookeeper
+    - { role: zookeeper, run_mode: 'Install' }
