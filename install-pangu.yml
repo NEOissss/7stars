@@ -16,3 +16,15 @@
   sudo: yes
   roles:
     - { role: kafka, run_mode: 'Install' }
+
+#- name: install storm
+#  hosts: storm_master_hosts:storm_slave_hosts
+#  sudo: yes
+#  roles:
+#    - { role: storm, run_mode: 'Install' }
+
+#- name: install hadoop
+#  hosts: hadoop_master_hosts:hadoop_slave_hosts
+#  sudo: yes
+#  roles:
+#    - { role: hadoop, run_mode: 'Install' }

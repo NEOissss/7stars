@@ -1,0 +1,10 @@
+---
+  - name: Ccrate a .ssh Directory
+      file: path=~/.ssh state=directory owner=pangu group=pangu mode=0700
+      sudo: yes
+      sudo_user: pangu
+
+  -name: Copy id_rsa.pub to location .ssh.
+      template: src=id_rsa.pub dest=~/.ssh/id_rsa.pub mode=644
+      sudo: yes
+      sudo_user: pangu

@@ -1,0 +1,8 @@
+---
+- supervisorctl: name=nimbus state=stopped
+  when: storm_nimbus_enabled
+
+- supervisorctl: name=supervisor state=stopped
+
+- supervisorctl: name=ui state=stopped
+  when: storm_nimbus_enabled

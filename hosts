@@ -8,12 +8,17 @@
 
 [redis_hosts]
 
-[storm-master]
 
-[storm-slaves]
+[storm_master_host]
 
-[hadoop-master]
 
-[hadoop-slaves]
+[storm_slave_hosts]
+
+
+[hadoop_master_hosts]
+
+
+[hadoop_slave_hosts]
+
 
 [mysql_hosts]
