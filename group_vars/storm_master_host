@@ -1,1 +1,1 @@
-storm_nimbus_enabled=true
+storm_nimbus_enabled: true

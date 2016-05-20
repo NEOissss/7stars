@@ -1,4 +1,10 @@
 ---
+- name: ssh password less configure
+  hosts: all
+  sudo: yes
+  roles:
+    - ssh
+
 #- name: install common components
 #  hosts: all
 #  sudo: yes
@@ -11,11 +17,10 @@
 #  roles:
 #    - { role: zookeeper, run_mode: 'Install' }
 
-- name: install kafka
-  hosts: kafka_hosts
-  sudo: yes
-  roles:
-    - { role: kafka, run_mode: 'Install' }
+#- name: install kafka
+#  hosts: kafka_hosts
+#  sudo: yes
+#    - { role: kafka, run_mode: 'Install' }
 
 #- name: install storm
 #  hosts: storm_master_hosts:storm_slave_hosts

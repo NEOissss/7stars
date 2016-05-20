@@ -1,10 +1,15 @@
 ---
-  - name: Ccrate a .ssh Directory
-      file: path=~/.ssh state=directory owner=pangu group=pangu mode=0700
-      sudo: yes
-      sudo_user: pangu
+- name: Ccrate a .ssh Directory
+  file: path=~/.ssh state=directory owner=pangu group=pangu mode=0700
+  sudo: yes
+  sudo_user: pangu
 
-  -name: Copy id_rsa.pub to location .ssh.
-      template: src=id_rsa.pub dest=~/.ssh/id_rsa.pub mode=644
-      sudo: yes
-      sudo_user: pangu
+- name: Create a authorized_keys Directory
+  file: path=~/.ssh/authorized_keys state=directory owner=pangu group=pangu mode=0700
+  sudo: yes
+  sudo_user: pangu
+
+- name: Copy id_rsa.pub to location .ssh.
+  copy: src=id_rsa.pub dest=~/.ssh/authorized_keys mode=644
+  sudo: yes
+  sudo_user: pangu
