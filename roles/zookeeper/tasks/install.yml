@@ -1,7 +1,4 @@
 ---
-- name: Change ownership on zokeeper directory.
-  file: path="{{zookeeper_dir}}" state=directory owner=pangu group=pangu recurse=yes
-
 - name: copy zookeeper-rpm
   copy: src=x86_64/zookeeper-3.4.6-1.x86_64.rpm dest=/opt
 

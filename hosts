@@ -1,6 +1,10 @@
-[zookeeper_hosts]
+192.168.200.153
 
-[kafka]
+[zookeeper_hosts]
+192.168.200.153
+
+[kafka_hosts]
+192.168.200.153
 
 [redis_hosts]
 
@@ -12,4 +16,4 @@
 
 [hadoop-slaves]
 
-[mysql]
+[mysql_hosts]

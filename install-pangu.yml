@@ -1,12 +1,18 @@
 ---
-- name: install common components
-  hosts: *
-  sudo: yes
-  roles:
-    - common
+#- name: install common components
+#  hosts: all
+#  sudo: yes
+#  roles:
+#    - common
 
-- name: install zookeeper
-  hosts: zookeeper_hosts
+#- name: install zookeeper
+#  hosts: zookeeper_hosts
+#  sudo: yes
+#  roles:
+#    - { role: zookeeper, run_mode: 'Install' }
+
+- name: install kafka
+  hosts: kafka_hosts
   sudo: yes
   roles:
-    - { role: zookeeper, run_mode: 'Install' }
+    - { role: kafka, run_mode: 'Install' }

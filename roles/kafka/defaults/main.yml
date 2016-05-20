@@ -1,5 +1,5 @@
 ---
-apache_mirror: http://mirror.bit.edu.cn/apache/
+apache_mirror: http://mirror.bit.edu.cn/apache
 kafka_hosts: "{{ansible_fqdn}}:9092"
 kafka_version: 0.9.0.1
 run_mode: Deploy
