@@ -1,0 +1,42 @@
+---
+#- name: Start zookeeper
+#  hosts: zookeeper_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: zookeeper, run_mode: 'Start' }
+
+#- name: Start redis
+#  hosts: redis_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: redis, run_mode: 'Start' }
+
+#- name: Start kafka
+#  hosts: kafka_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: kafka, run_mode: 'Start' }
+
+#- name: Start storm
+#  hosts: storm_master_hosts:storm_slave_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: storm, run_mode: 'Start' }
+
+#- name: Start hadoop
+#  hosts: hadoop_master_hosts:hadoop_slave_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: hadoop, run_mode: 'Start' }
+
+- name: Start mysql
+  hosts: mysql_hosts
+  remote_user: pangu
+  sudo: yes
+  roles:
+    - { role: mysql, run_mode: 'Start' }

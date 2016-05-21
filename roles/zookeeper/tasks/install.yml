@@ -19,6 +19,9 @@
   notify:
     - restart zookeeper
 
+- name: Create data_dir
+  file: path={{zookeeper_data_dir}} state=directory owner=pangu group=pangu mode=755
+
 - name: Enable 2181
   firewalld: port=2181/tcp permanent=true state=enabled
   notify: restart firewalld

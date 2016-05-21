@@ -1,8 +1,15 @@
 ---
-- name: Install the mysql packages
-  yum: name={{ item }} state=installed
-  with_items: mysql_pkgs
-  when: ansible_os_family == 'RedHat'
+- name: Install the dependency package libselinux-python
+  yum: name=libselinux-python state=installed
+
+- name: Copy rpm package to destination
+  copy: src=x86_64/mysql-server-5.5.49-1.el6.remi.x86_64.rpm dest=/opt
+
+- name: Install the MySQL server package mysql-server
+  yum: name=/opt/mysql-server-5.5.49-1.el6.remi.x86_64.rpm state=present
+
+- name: Install the dependency packages MySQL-python
+  yum: name=MySQL-python state=installed
 
 - name: Copy the my.cnf file
   template: src=my.cnf.j2 dest={{ mysql_conf_dir }}/my.cnf

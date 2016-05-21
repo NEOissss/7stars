@@ -1,35 +1,55 @@
 ---
-- name: ssh password less configure
-  hosts: all
-  sudo: yes
-  roles:
-    - ssh
-
-#- name: install common components
+#- name: ssh password less configure
 #  hosts: all
 #  sudo: yes
 #  roles:
-#    - common
+#    - ssh
+
+#- name: install common components
+#  hosts: all
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: common, ansible_user_pass: 'pangu', ansible_sudo_pass: 'pangu' }
 
 #- name: install zookeeper
 #  hosts: zookeeper_hosts
+#  remote_user: pangu
 #  sudo: yes
 #  roles:
 #    - { role: zookeeper, run_mode: 'Install' }
 
 #- name: install kafka
 #  hosts: kafka_hosts
+#  remote_user: pangu
 #  sudo: yes
+#  roles:
 #    - { role: kafka, run_mode: 'Install' }
+
+#- name: install redis
+#  hosts: redis_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: redis, run_mode: 'Install' }
 
 #- name: install storm
 #  hosts: storm_master_hosts:storm_slave_hosts
+#  remote_user: pangu
 #  sudo: yes
 #  roles:
 #    - { role: storm, run_mode: 'Install' }
 
 #- name: install hadoop
 #  hosts: hadoop_master_hosts:hadoop_slave_hosts
+#  remote_user: pangu
 #  sudo: yes
 #  roles:
 #    - { role: hadoop, run_mode: 'Install' }
+
+- name: install MySQL
+  hosts: mysql_hosts
+  remote_user: pangu
+  sudo: yes
+  roles:
+    - { role: mysql, run_mode: 'Install' }
