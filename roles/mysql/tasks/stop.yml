@@ -1,4 +1,3 @@
 ---
 - name: Stop the mysql services
-  service: name=mysqld state=stopped
-  
+  systemctl: name=mysql.service state=stopped
