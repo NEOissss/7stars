@@ -19,12 +19,12 @@
 #  roles:
 #    - { role: zookeeper, run_mode: 'Install' }
 
-#- name: install kafka
-#  hosts: kafka_hosts
-#  remote_user: pangu
-#  sudo: yes
-#  roles:
-#    - { role: kafka, run_mode: 'Install' }
+- name: install kafka
+  hosts: kafka_hosts
+  remote_user: pangu
+  sudo: yes
+  roles:
+    - { role: kafka, run_mode: 'Install' }
 
 #- name: install redis
 #  hosts: redis_hosts
@@ -47,9 +47,9 @@
 #  roles:
 #    - { role: hadoop, run_mode: 'Install' }
 
-- name: install MySQL
-  hosts: mysql_hosts
-  remote_user: pangu
-  sudo: yes
-  roles:
-    - { role: mysql, run_mode: 'Install' }
+#- name: install MySQL
+#  hosts: mysql_hosts
+#  remote_user: pangu
+#  sudo: yes
+#  roles:
+#    - { role: mysql, run_mode: 'Install' }

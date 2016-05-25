@@ -3,7 +3,7 @@
     - "{{ hostvars[node].ipv6_addr }}"
 {% endfor %}
 
-{% for node in groups['pangu-redis'] %}
+{% for node in groups['redis_hosts'] %}
     nimbus.host: "{{ hostvars[node].ipv6_addr }}"
 {% endfor %}
  storm.zookeeper.port: 2181

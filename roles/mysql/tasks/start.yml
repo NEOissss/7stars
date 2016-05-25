@@ -1,3 +1,3 @@
 ---
 - name: Start the mysql services
-  service: name=mysql state=started enabled=yes
+  systemctl: name=mysql.service state=started enabled=yes
